@@ -84,3 +84,19 @@ Each game also has its own instruction screen before play.
   - Floating touch controller on mobile browsers
 - Mobile players get on-screen D-pad and A/B/P buttons during gameplay.
 - Platform games now draw a small humanoid player character; Super Mario World uses a Mario-like pixel character.
+
+## Campaign upgrade
+
+- All 15 games now expose `totalLevels: 100`.
+- Backend generates 100 campaign levels per game through:
+  - `GET /api/games/:id/levels`
+  - `GET /api/games/:id/levels/:level`
+- Each generated level has its own:
+  - world name
+  - zone
+  - difficulty label
+  - difficulty score
+  - speed/enemy multiplier
+  - target score
+  - palette/theme
+- Frontend instruction screen includes a Campaign Level selector before starting the game.

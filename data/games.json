@@ -31,7 +31,9 @@
       "Collect dots for points.",
       "Avoid ghosts.",
       "Clear the maze to win the round."
-    ]
+    ],
+    "playStyle": "Maze chase",
+    "totalLevels": 100
   },
   {
     "id": "speed",
@@ -65,7 +67,9 @@
       "Collect rings.",
       "Jump over spikes and blocks.",
       "Survive as the speed increases."
-    ]
+    ],
+    "playStyle": "Momentum runner",
+    "totalLevels": 100
   },
   {
     "id": "platform",
@@ -99,7 +103,9 @@
       "Collect coins.",
       "Land on enemies or avoid them.",
       "Reach the flag at the far right."
-    ]
+    ],
+    "playStyle": "Precision platformer",
+    "totalLevels": 100
   },
   {
     "id": "duel",
@@ -133,7 +139,9 @@
       "Reduce CPU health to zero.",
       "Block incoming hits.",
       "Do not let your health hit zero."
-    ]
+    ],
+    "playStyle": "Arcade fighter",
+    "totalLevels": 100
   },
   {
     "id": "tetris",
@@ -167,7 +175,9 @@
       "Fill rows to clear lines.",
       "Avoid stacking to the top.",
       "Score rises with multi-line clears."
-    ]
+    ],
+    "playStyle": "Falling block puzzle",
+    "totalLevels": 100
   },
   {
     "id": "zelda",
@@ -201,7 +211,9 @@
       "Explore the maze.",
       "Collect relics for points.",
       "Avoid monsters and clear the route."
-    ]
+    ],
+    "playStyle": "Top-down adventure",
+    "totalLevels": 100
   },
   {
     "id": "donkey",
@@ -235,7 +247,9 @@
       "Collect bananas/coins.",
       "Avoid enemies.",
       "Reach the end of the jungle stage."
-    ]
+    ],
+    "playStyle": "Jungle platformer",
+    "totalLevels": 100
   },
   {
     "id": "fzero",
@@ -269,7 +283,9 @@
       "Survive the fastest track.",
       "Dodge barriers.",
       "Push your score higher as speed rises."
-    ]
+    ],
+    "playStyle": "Hover racing",
+    "totalLevels": 100
   },
   {
     "id": "goldeneye",
@@ -303,7 +319,9 @@
       "Shoot hostile targets.",
       "Avoid missing too much.",
       "Survive the mission timer."
-    ]
+    ],
+    "playStyle": "Spy target shooter",
+    "totalLevels": 100
   },
   {
     "id": "ape",
@@ -337,7 +355,9 @@
       "Catch monkeys by collecting targets.",
       "Avoid hazards.",
       "Reach the stage end."
-    ]
+    ],
+    "playStyle": "Gadget chase platformer",
+    "totalLevels": 100
   },
   {
     "id": "tekken",
@@ -371,7 +391,9 @@
       "Drop CPU health to zero.",
       "Time blocks and counterattacks.",
       "Win the round."
-    ]
+    ],
+    "playStyle": "Combo fighter",
+    "totalLevels": 100
   },
   {
     "id": "oddworld",
@@ -405,7 +427,9 @@
       "Move carefully through hazards.",
       "Collect clues.",
       "Escape the stage."
-    ]
+    ],
+    "playStyle": "Cinematic puzzle platformer",
+    "totalLevels": 100
   },
   {
     "id": "doom",
@@ -439,7 +463,9 @@
       "Hit enemy targets.",
       "Protect your health.",
       "Survive as targets speed up."
-    ]
+    ],
+    "playStyle": "Arena shooter",
+    "totalLevels": 100
   },
   {
     "id": "metroid",
@@ -473,7 +499,9 @@
       "Collect energy orbs.",
       "Avoid alien hazards.",
       "Reach the far exit."
-    ]
+    ],
+    "playStyle": "Sci-fi exploration platformer",
+    "totalLevels": 100
   },
   {
     "id": "wildarms",
@@ -507,6 +535,8 @@
       "Collect treasure.",
       "Avoid roaming enemies.",
       "Finish the frontier route."
-    ]
+    ],
+    "playStyle": "Frontier RPG adventure",
+    "totalLevels": 100
   }
 ]

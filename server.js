@@ -41,6 +41,56 @@ function writeJson(file, data) {
 }
 
 
+
+const LEVEL_WORLDS = {
+  maze: ['Neon Maze', 'Ghost Subway', 'Candy Grid', 'Midnight Labyrinth', 'Warp Tunnel'],
+  speed: ['Emerald Coast', 'Chemical Highway', 'Sky Rail', 'Lava Loop', 'Star Speedway'],
+  platform: ['Mushroom Hills', 'Brick Caverns', 'Cloud Steps', 'Lava Castle', 'Star Road'],
+  duel: ['Downtown Dojo', 'Harbor Ring', 'Temple Arena', 'Neon Rooftop', 'Final Arcade'],
+  tetris: ['Classic Grid', 'Ice Matrix', 'Neon Stack', 'Gravity Core', 'Master Well'],
+  zelda: ['Light Forest', 'Desert Ruins', 'Dark Marsh', 'Mirror Castle', 'Sacred Peak'],
+  donkey: ['Jungle Canopy', 'Mine Cart Ridge', 'Barrel Bay', 'Snowy Pines', 'Kong Temple'],
+  fzero: ['Mute City', 'Big Blue', 'Sand Ocean', 'Fire Field', 'Silence Circuit'],
+  goldeneye: ['Dam Facility', 'Bunker Halls', 'Archive Maze', 'Control Room', 'Cradle Tower'],
+  ape: ['Time Beach', 'Dino Park', 'Cyber City', 'Snow Fortress', 'Space Circus'],
+  tekken: ['Arcade Gym', 'Moonlit Yard', 'Steel Factory', 'Temple Gate', 'King Arena'],
+  oddworld: ['Rupture Farm', 'Scrap Lines', 'Shadow Pens', 'Boiler Depths', 'Escape Portal'],
+  doom: ['Hangar Gate', 'Toxic Refinery', 'Inferno Keep', 'Phobos Core', 'Demon Citadel'],
+  metroid: ['Crateria Rain', 'Brinstar Vines', 'Norfair Heat', 'Wrecked Ship', 'Tourian Depths'],
+  wildarms: ['Dusty Trail', 'Canyon Town', 'Ancient Mine', 'Mirage Desert', 'Frontier Shrine']
+};
+
+const GAMEPLAY_STYLES = {
+  maze: 'Maze chase', speed: 'Momentum runner', platform: 'Precision platformer', duel: 'Arcade fighter', tetris: 'Falling block puzzle',
+  zelda: 'Top-down adventure', donkey: 'Jungle platformer', fzero: 'Hover racing', goldeneye: 'Spy target shooter', ape: 'Gadget chase platformer',
+  tekken: 'Combo fighter', oddworld: 'Cinematic puzzle platformer', doom: 'Arena shooter', metroid: 'Sci-fi exploration platformer', wildarms: 'Frontier RPG adventure'
+};
+
+function buildLevels(game) {
+  const worlds = LEVEL_WORLDS[game.id] || ['Retro World'];
+  return Array.from({ length: 100 }, (_, i) => {
+    const level = i + 1;
+    const zone = Math.floor(i / 20) + 1;
+    const world = worlds[i % worlds.length];
+    const difficultyScore = Math.min(100, 8 + Math.round(level * 0.92));
+    const difficulty = level <= 20 ? 'Rookie' : level <= 40 ? 'Normal' : level <= 60 ? 'Hard' : level <= 80 ? 'Expert' : 'Nightmare';
+    return {
+      gameId: game.id,
+      level,
+      name: `Level ${level}: ${world}`,
+      world,
+      zone,
+      difficulty,
+      difficultyScore,
+      speedMultiplier: Number((1 + level * 0.012).toFixed(2)),
+      enemyMultiplier: Number((1 + level * 0.01).toFixed(2)),
+      targetScore: 500 + level * 150,
+      palette: ['neon', 'forest', 'ice', 'lava', 'space'][i % 5],
+      objective: `${GAMEPLAY_STYLES[game.id] || 'Retro challenge'} in ${world}. Clear the objective with difficulty ${difficultyScore}/100.`
+    };
+  });
+}
+
 function detectDevice(req) {
   const ua = req.headers['user-agent'] || '';
   const chMobile = req.headers['sec-ch-ua-mobile'];
@@ -106,13 +156,26 @@ async function api(req, res) {
   }
 
   if (req.method === 'GET' && url.pathname === '/api/games') {
-    return send(res, 200, games());
+    return send(res, 200, games().map(g => ({ ...g, playStyle: GAMEPLAY_STYLES[g.id] || 'Retro challenge', totalLevels: 100 })));
+  }
+
+
+  const levelsMatch = url.pathname.match(/^\/api\/games\/([^/]+)\/levels(?:\/(\d+))?$/);
+  if (req.method === 'GET' && levelsMatch) {
+    const game = games().find(g => g.id === levelsMatch[1]);
+    if (!game) return send(res, 404, { error: 'Game not found' });
+    const levels = buildLevels(game);
+    if (levelsMatch[2]) {
+      const level = levels.find(l => l.level === Number(levelsMatch[2]));
+      return level ? send(res, 200, level) : send(res, 404, { error: 'Level not found' });
+    }
+    return send(res, 200, levels);
   }
 
   const gameMatch = url.pathname.match(/^\/api\/games\/([^/]+)$/);
   if (req.method === 'GET' && gameMatch) {
     const game = games().find(g => g.id === gameMatch[1]);
-    return game ? send(res, 200, game) : send(res, 404, { error: 'Game not found' });
+    return game ? send(res, 200, { ...game, playStyle: GAMEPLAY_STYLES[game.id] || 'Retro challenge', totalLevels: 100 }) : send(res, 404, { error: 'Game not found' });
   }
 
   if (req.method === 'GET' && url.pathname === '/api/settings') {

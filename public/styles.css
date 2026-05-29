@@ -53,3 +53,5 @@ body.mobile-mode .mobileOnlyNote{display:block}body.desktop-mode .mobileControls
 @media(max-width:900px){#play .panel{padding-bottom:170px}#play .canvasWrap{margin-bottom:150px}}
 @media(min-width:901px){body.mobile-mode .mobileControls:not(.hidden){display:flex!important}}
 #play canvas,#play .canvasWrap{touch-action:none}body.mobile-mode{overscroll-behavior:none}
+.levelInfo{border:2px solid var(--border);background:#090d17;color:var(--muted);padding:10px;margin:8px 0 12px;font-size:15px;line-height:1.35}.levelInfo strong{color:var(--accent)}
+.campaignBadge{display:inline-block;margin-top:8px;border:2px solid var(--accent);padding:4px 7px;color:var(--accent);background:#05070d;font-weight:900;font-size:12px}
