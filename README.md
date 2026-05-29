@@ -110,3 +110,12 @@ The five game engines were upgraded beyond visual theme swaps:
 - Tetris: gravity speed increases and higher levels start with generated garbage rows.
 
 Each selected level now changes both the environment and actual gameplay rules.
+
+## Longer levels and feature upgrade
+
+Latest gameplay tuning:
+
+- Pac-Man difficulty reduced: fewer ghosts early, slower/smarter curve, power pellets added.
+- Mario-style platformer expanded with long stages, sprint/crouch, timer, flag finish, question blocks, bricks, hidden blocks, pipes, warp/bonus pipe logic, mushrooms, fire flowers, stars, 1-ups, fireballs, coins, moving platforms, enemy types, castle/underwater/overworld-style worlds.
+- Sonic-style runner expanded with longer zones, momentum physics, spin dash, rings-as-health, springs, monitors, loops, shields, speed shoes, invincibility, extra lives, underwater/casino-like zone behaviors, and boss-act logic.
+- Levels are now intentionally longer so players cannot finish them in a few seconds.
