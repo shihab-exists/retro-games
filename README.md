@@ -88,3 +88,13 @@ Mobile:
 - A button
 - B button
 - P pause button
+
+## Level environment/difficulty behavior
+
+Level selection now changes gameplay, not just text:
+
+- Each level has a unique world label such as `Mushroom Hills Sector 1`, `Brick Caverns Sector 1`, etc.
+- The canvas background/theme changes by level palette: neon, forest, ice, lava, and space.
+- A level banner is drawn inside the game canvas showing world, level number, and difficulty score.
+- Difficulty affects game speed/enemy behavior through level multipliers.
+- Higher campaign levels increase speed/enemy pressure and target score.

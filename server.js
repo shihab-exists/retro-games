@@ -71,7 +71,8 @@ function buildLevels(game) {
   return Array.from({ length: 100 }, (_, i) => {
     const level = i + 1;
     const zone = Math.floor(i / 20) + 1;
-    const world = worlds[i % worlds.length];
+    const baseWorld = worlds[i % worlds.length];
+    const world = `${baseWorld} Sector ${Math.floor(i / worlds.length) + 1}`;
     const difficultyScore = Math.min(100, 8 + Math.round(level * 0.92));
     const difficulty = level <= 20 ? 'Rookie' : level <= 40 ? 'Normal' : level <= 60 ? 'Hard' : level <= 80 ? 'Expert' : 'Nightmare';
     return {
