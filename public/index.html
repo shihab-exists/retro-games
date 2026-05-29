@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Retro Arcade MVP</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body class="scanlines">
+  <main id="menu" class="screen app">
+    <header class="top">
+      <span class="coin">◉</span><span class="insert">INSERT COIN</span>
+      <h1 class="pixel">RETRO ARCADE</h1>
+      <p>Choose Your Retro Challenge</p>
+    </header>
+    <section id="gameGrid" class="grid"></section>
+    <section class="bottom">
+      <div class="selectedInfo"><small>SELECTED GAME</small><h3 id="selectedTitle">—</h3><p id="selectedDesc">Choose one card to continue.</p></div>
+      <div class="actions"><button id="randomBtn" class="btn">Random</button><button id="detailsBtn" class="btn cyan">View Details</button><button id="startBtn" class="btn primary">Start Game</button></div>
+    </section>
+  </main>
+
+  <main id="instructions" class="screen app hidden">
+    <header class="top"><h1 class="pixel" id="instTitle">READY?</h1><p id="instSub">Read controls before entering the cabinet.</p></header>
+    <section class="two">
+      <div class="panel instructions heroCard">
+        <h2>Game Brief</h2><p id="instBrief"></p>
+        <h3>Keyboard Controller</h3><div id="controlList" class="keys"></div>
+        <h3>Objective</h3><ul id="objectiveList"></ul>
+      </div>
+      <aside class="panel settings">
+        <h3 class="pixel" style="color:var(--yellow);margin-top:0">Settings</h3>
+        <label>Difficulty</label><select id="difficulty"><option value="easy">Easy</option><option selected value="normal">Normal</option><option value="hard">Hard</option></select>
+        <label class="toggle"><input id="soundToggle" type="checkbox" checked /> 8-bit UI sounds</label>
+        <label class="toggle"><input id="crtToggle" type="checkbox" checked /> CRT scanline overlay</label>
+        <label>Visual mode</label><select id="visualMode"><option value="glow" selected>Neon Glow</option><option value="clean">Cleaner Pixel</option><option value="high">High Contrast</option></select>
+        <div style="height:18px"></div>
+        <button id="playNowBtn" class="btn primary" style="width:100%">Play / Start</button>
+        <button id="backMenuBtn" class="btn" style="width:100%;margin-top:12px">Back to Menu</button>
+      </aside>
+    </section>
+  </main>
+
+  <main id="play" class="screen app hidden">
+    <section class="panel">
+      <div class="playTop"><h2 id="playTitle" class="pixel">GAME</h2><div class="hud"><span id="scoreHud">SCORE 0</span><span id="lifeHud">LIVES 3</span><span id="statusHud">READY</span></div><div class="actions"><button id="pauseBtn" class="btn">Pause</button><button id="quitBtn" class="btn danger">Quit</button></div></div>
+      <div class="canvasWrap"><canvas id="gameCanvas" width="960" height="540"></canvas><div id="pauseOverlay" class="overlayMsg hidden"><div class="box"><h3 class="pixel">PAUSED</h3><p>Press P or the Pause button to continue.</p><button id="resumeBtn" class="btn primary">Resume</button></div></div></div>
+      <div id="miniHelp" class="miniHelp">Arrow keys / WASD move. Space or Enter action. P pauses. ESC quits.</div>
+    </section>
+  </main>
+
+</body>
+<script src="app.js"></script>
+</html>

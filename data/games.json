@@ -1,0 +1,512 @@
+[
+  {
+    "id": "maze",
+    "title": "Pac-Man",
+    "year": "1980",
+    "emoji": "🟡",
+    "accent": "#FFD93D",
+    "tag": "Maze escape madness",
+    "desc": "Ghosts get smarter fast — one wrong turn and it’s over.",
+    "thumb": "mazeThumb",
+    "brief": "A maze-chase arcade challenge inspired by classic dot-eating action. Collect every pellet while avoiding ghosts that cut off your route.",
+    "controls": [
+      [
+        "Arrow Keys / WASD",
+        "Move through the maze"
+      ],
+      [
+        "P",
+        "Pause"
+      ],
+      [
+        "ESC",
+        "Quit to menu"
+      ],
+      [
+        "Enter",
+        "Restart after game over"
+      ]
+    ],
+    "objectives": [
+      "Collect dots for points.",
+      "Avoid ghosts.",
+      "Clear the maze to win the round."
+    ]
+  },
+  {
+    "id": "speed",
+    "title": "Sonic the Hedgehog 2",
+    "year": "1992",
+    "emoji": "🔵",
+    "accent": "#4DA8FF",
+    "tag": "Pure speed platforming",
+    "desc": "Fast, fluid, and packed with momentum-driven action.",
+    "thumb": "sonicThumb",
+    "brief": "A fast side-scrolling runner inspired by speed platformers. Keep momentum, jump obstacles, and grab rings.",
+    "controls": [
+      [
+        "Space / ↑ / W",
+        "Jump"
+      ],
+      [
+        "↓ / S",
+        "Slide / fast fall"
+      ],
+      [
+        "P",
+        "Pause"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Collect rings.",
+      "Jump over spikes and blocks.",
+      "Survive as the speed increases."
+    ]
+  },
+  {
+    "id": "platform",
+    "title": "Super Mario World",
+    "year": "1990",
+    "emoji": "🍄",
+    "accent": "#FF4D4D",
+    "tag": "Creative classic platforming",
+    "desc": "Tight controls and unforgettable level design.",
+    "thumb": "marioThumb",
+    "brief": "A compact platforming stage with coins, enemies, and chunky blocks. Precision jumping is the whole game.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move"
+      ],
+      [
+        "Space / ↑ / W",
+        "Jump"
+      ],
+      [
+        "↓ / S",
+        "Crouch / drop faster"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Collect coins.",
+      "Land on enemies or avoid them.",
+      "Reach the flag at the far right."
+    ]
+  },
+  {
+    "id": "duel",
+    "title": "Street Fighter II",
+    "year": "1991",
+    "emoji": "🥊",
+    "accent": "#FF6B6B",
+    "tag": "Arcade 1v1 showdown",
+    "desc": "Pick a fighter and test your reflexes and strategy.",
+    "thumb": "fightThumb",
+    "brief": "A one-screen arcade duel inspired by old-school fighting games. Manage spacing, strike, and block the CPU.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move"
+      ],
+      [
+        "Space",
+        "Punch"
+      ],
+      [
+        "Enter / K",
+        "Kick"
+      ],
+      [
+        "↓ / S",
+        "Block"
+      ]
+    ],
+    "objectives": [
+      "Reduce CPU health to zero.",
+      "Block incoming hits.",
+      "Do not let your health hit zero."
+    ]
+  },
+  {
+    "id": "tetris",
+    "title": "Tetris",
+    "year": "1985",
+    "emoji": "🧱",
+    "accent": "#A66CFF",
+    "tag": "Simple. Hypnotic. Brutal.",
+    "desc": "Easy to learn, intense to master at higher speeds.",
+    "thumb": "tetrisThumb",
+    "brief": "A falling-block puzzle challenge. Rotate, place, and clear rows before the stack reaches the top.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move piece"
+      ],
+      [
+        "↑ / W / Space",
+        "Rotate"
+      ],
+      [
+        "↓ / S",
+        "Soft drop"
+      ],
+      [
+        "Enter",
+        "Hard drop"
+      ]
+    ],
+    "objectives": [
+      "Fill rows to clear lines.",
+      "Avoid stacking to the top.",
+      "Score rises with multi-line clears."
+    ]
+  },
+  {
+    "id": "zelda",
+    "title": "The Legend of Zelda: A Link to the Past",
+    "year": "1991",
+    "emoji": "🗡️",
+    "accent": "#59D86D",
+    "tag": "Overworld dungeon adventure",
+    "desc": "Explore light and dark realms with crafted secrets and danger.",
+    "thumb": "zeldaThumb",
+    "brief": "A top-down adventure-inspired challenge. Navigate a dungeon-like maze, collect relics, and avoid roaming monsters.",
+    "controls": [
+      [
+        "Arrow Keys / WASD",
+        "Move hero"
+      ],
+      [
+        "Space",
+        "Use sword / action"
+      ],
+      [
+        "P",
+        "Pause"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Explore the maze.",
+      "Collect relics for points.",
+      "Avoid monsters and clear the route."
+    ]
+  },
+  {
+    "id": "donkey",
+    "title": "Donkey Kong Country",
+    "year": "1994",
+    "emoji": "🦍",
+    "accent": "#C77732",
+    "tag": "Jungle platform rush",
+    "desc": "Tight platforming, barrels, bananas, and chunky jungle rhythm.",
+    "thumb": "donkeyThumb",
+    "brief": "A jungle platformer-inspired stage. Run, jump, collect bananas, and dodge hazards.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move"
+      ],
+      [
+        "Space / ↑ / W",
+        "Jump"
+      ],
+      [
+        "↓ / S",
+        "Drop faster"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Collect bananas/coins.",
+      "Avoid enemies.",
+      "Reach the end of the jungle stage."
+    ]
+  },
+  {
+    "id": "fzero",
+    "title": "F-Zero",
+    "year": "1990",
+    "emoji": "🚀",
+    "accent": "#FF8A00",
+    "tag": "High-speed hover racing",
+    "desc": "A futuristic racing rush built around speed and reaction time.",
+    "thumb": "fzeroThumb",
+    "brief": "A hover-racer-inspired speed challenge. Dodge track hazards as the velocity keeps climbing.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Steer"
+      ],
+      [
+        "Space / ↑ / W",
+        "Boost jump/evade"
+      ],
+      [
+        "P",
+        "Pause"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Survive the fastest track.",
+      "Dodge barriers.",
+      "Push your score higher as speed rises."
+    ]
+  },
+  {
+    "id": "goldeneye",
+    "title": "GoldenEye 007",
+    "year": "1997",
+    "emoji": "🔫",
+    "accent": "#D6B85A",
+    "tag": "Living-room spy shooter",
+    "desc": "Split-screen era FPS energy with quick aim and target reflexes.",
+    "thumb": "goldenThumb",
+    "brief": "A spy-shooter-inspired target range. Move the reticle, tag enemies, and avoid civilian decoys.",
+    "controls": [
+      [
+        "Arrow Keys / WASD",
+        "Move aim"
+      ],
+      [
+        "Space / Enter",
+        "Shoot"
+      ],
+      [
+        "P",
+        "Pause"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Shoot hostile targets.",
+      "Avoid missing too much.",
+      "Survive the mission timer."
+    ]
+  },
+  {
+    "id": "ape",
+    "title": "Ape Escape",
+    "year": "1999",
+    "emoji": "🐒",
+    "accent": "#FFB347",
+    "tag": "Monkey-catching gadget chase",
+    "desc": "Creative platforming built around chasing clever monkeys through time.",
+    "thumb": "apeThumb",
+    "brief": "A gadget-platformer-inspired chase. Leap through a stage and collect escaped monkeys/coins.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move"
+      ],
+      [
+        "Space / ↑ / W",
+        "Jump"
+      ],
+      [
+        "Enter",
+        "Swing net / action"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Catch monkeys by collecting targets.",
+      "Avoid hazards.",
+      "Reach the stage end."
+    ]
+  },
+  {
+    "id": "tekken",
+    "title": "Tekken 2",
+    "year": "1995",
+    "emoji": "👾",
+    "accent": "#B56CFF",
+    "tag": "3D arcade fighter energy",
+    "desc": "Deep combos, iconic fighters, and tense close-range duels.",
+    "thumb": "tekkenThumb",
+    "brief": "A fighting-game-inspired arcade duel. Step in, strike, block, and defeat the CPU opponent.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move"
+      ],
+      [
+        "Space",
+        "Punch"
+      ],
+      [
+        "Enter / K",
+        "Kick"
+      ],
+      [
+        "↓ / S",
+        "Block"
+      ]
+    ],
+    "objectives": [
+      "Drop CPU health to zero.",
+      "Time blocks and counterattacks.",
+      "Win the round."
+    ]
+  },
+  {
+    "id": "oddworld",
+    "title": "Oddworld: Abe's Oddysee",
+    "year": "1997",
+    "emoji": "👽",
+    "accent": "#76D7C4",
+    "tag": "Dark puzzle platform escape",
+    "desc": "Atmospheric cinematic platforming with danger around every step.",
+    "thumb": "oddThumb",
+    "brief": "A puzzle-platformer-inspired escape. Move carefully, collect clues, and survive the factory path.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move"
+      ],
+      [
+        "Space / ↑ / W",
+        "Jump"
+      ],
+      [
+        "↓ / S",
+        "Sneak/drop"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Move carefully through hazards.",
+      "Collect clues.",
+      "Escape the stage."
+    ]
+  },
+  {
+    "id": "doom",
+    "title": "DOOM",
+    "year": "1993",
+    "emoji": "💀",
+    "accent": "#D6422B",
+    "tag": "Fast demon-blasting FPS",
+    "desc": "A milestone shooter: quick, intense, loud, and endlessly replayable.",
+    "thumb": "doomThumb",
+    "brief": "A fast shooter-inspired target arena. Keep moving, blast demons, and survive the wave.",
+    "controls": [
+      [
+        "Arrow Keys / WASD",
+        "Move aim"
+      ],
+      [
+        "Space / Enter",
+        "Fire"
+      ],
+      [
+        "P",
+        "Pause"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Hit enemy targets.",
+      "Protect your health.",
+      "Survive as targets speed up."
+    ]
+  },
+  {
+    "id": "metroid",
+    "title": "Super Metroid",
+    "year": "1994",
+    "emoji": "🧬",
+    "accent": "#FF7A3D",
+    "tag": "Isolated sci-fi exploration",
+    "desc": "Non-linear exploration, haunting atmosphere, and secrets everywhere.",
+    "thumb": "metroidThumb",
+    "brief": "A sci-fi exploration-platformer-inspired stage. Jump, collect energy, and reach the exit.",
+    "controls": [
+      [
+        "← / → or A / D",
+        "Move"
+      ],
+      [
+        "Space / ↑ / W",
+        "Jump"
+      ],
+      [
+        "Enter",
+        "Blaster / action"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Collect energy orbs.",
+      "Avoid alien hazards.",
+      "Reach the far exit."
+    ]
+  },
+  {
+    "id": "wildarms",
+    "title": "Wild Arms",
+    "year": "1996",
+    "emoji": "🌍",
+    "accent": "#E2B15C",
+    "tag": "Western JRPG adventure",
+    "desc": "A sweeping frontier quest with emotional story and classic RPG charm.",
+    "thumb": "wildThumb",
+    "brief": "A western-RPG-inspired overworld quest. Explore the frontier maze, collect treasures, and avoid monsters.",
+    "controls": [
+      [
+        "Arrow Keys / WASD",
+        "Move traveler"
+      ],
+      [
+        "Space / Enter",
+        "Interact"
+      ],
+      [
+        "P",
+        "Pause"
+      ],
+      [
+        "ESC",
+        "Quit"
+      ]
+    ],
+    "objectives": [
+      "Collect treasure.",
+      "Avoid roaming enemies.",
+      "Finish the frontier route."
+    ]
+  }
+]

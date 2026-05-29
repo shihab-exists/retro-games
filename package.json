@@ -1,0 +1,20 @@
+{
+  "name": "retro-arcade-webapp",
+  "version": "1.0.0",
+  "description": "Retro arcade web app with frontend, backend API, keyboard controls, instructions, settings, and 15 game cards.",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "check": "node --check server.js && node --check public/app.js"
+  },
+  "keywords": [
+    "retro",
+    "arcade",
+    "webapp",
+    "node",
+    "frontend",
+    "backend"
+  ],
+  "license": "MIT"
+}
