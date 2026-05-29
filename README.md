@@ -74,3 +74,13 @@ Common controls:
 - Quit: ESC
 
 Each game also has its own instruction screen before play.
+
+## Latest UX updates
+
+- Clicking any game card now opens a pixel-style confirmation popup asking whether to start.
+- Backend endpoint `GET /api/device` detects mobile vs desktop from request headers.
+- The frontend automatically selects:
+  - Desktop keyboard controls on desktop browsers
+  - Floating touch controller on mobile browsers
+- Mobile players get on-screen D-pad and A/B/P buttons during gameplay.
+- Platform games now draw a small humanoid player character; Super Mario World uses a Mario-like pixel character.

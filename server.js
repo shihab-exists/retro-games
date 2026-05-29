@@ -40,6 +40,21 @@ function writeJson(file, data) {
   fs.writeFileSync(file, JSON.stringify(data, null, 2) + '\n');
 }
 
+
+function detectDevice(req) {
+  const ua = req.headers['user-agent'] || '';
+  const chMobile = req.headers['sec-ch-ua-mobile'];
+  const mobileByCH = chMobile === '?1';
+  const mobileByUA = /Android|iPhone|iPad|iPod|IEMobile|Opera Mini|Mobile/i.test(ua);
+  const isMobile = mobileByCH || mobileByUA;
+  return {
+    type: isMobile ? 'mobile' : 'desktop',
+    isMobile,
+    controlMode: isMobile ? 'mobile' : 'desktop',
+    source: 'backend-user-agent'
+  };
+}
+
 function send(res, status, body, type = 'application/json; charset=utf-8') {
   res.writeHead(status, { 'Content-Type': type, 'Cache-Control': 'no-store' });
   res.end(typeof body === 'string' ? body : JSON.stringify(body));
@@ -72,7 +87,7 @@ function staticFile(req, res) {
   fs.readFile(filePath, (err, data) => {
     if (err) return send(res, 404, 'Not found', 'text/plain; charset=utf-8');
     const ext = path.extname(filePath).toLowerCase();
-    res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'application/octet-stream' });
+    res.writeHead(200, { 'Content-Type': mimeTypes[ext] || 'application/octet-stream', 'Cache-Control': 'no-store' });
     res.end(data);
   });
 }
@@ -83,6 +98,11 @@ async function api(req, res) {
 
   if (req.method === 'GET' && url.pathname === '/api/health') {
     return send(res, 200, { ok: true, app: 'Retro Arcade API', games: games().length });
+  }
+
+
+  if (req.method === 'GET' && url.pathname === '/api/device') {
+    return send(res, 200, detectDevice(req));
   }
 
   if (req.method === 'GET' && url.pathname === '/api/games') {

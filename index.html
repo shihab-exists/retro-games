@@ -25,7 +25,7 @@
     <section class="two">
       <div class="panel instructions heroCard">
         <h2>Game Brief</h2><p id="instBrief"></p>
-        <h3>Keyboard Controller</h3><div id="controlList" class="keys"></div>
+        <h3 id="controlHeading">Keyboard Controller</h3><p id="deviceHint" class="deviceHint">Detecting device...</p><div id="controlList" class="keys"></div>
         <h3>Objective</h3><ul id="objectiveList"></ul>
       </div>
       <aside class="panel settings">
@@ -34,6 +34,7 @@
         <label class="toggle"><input id="soundToggle" type="checkbox" checked /> 8-bit UI sounds</label>
         <label class="toggle"><input id="crtToggle" type="checkbox" checked /> CRT scanline overlay</label>
         <label>Visual mode</label><select id="visualMode"><option value="glow" selected>Neon Glow</option><option value="clean">Cleaner Pixel</option><option value="high">High Contrast</option></select>
+        <label>Controller mode</label><select id="controlMode"><option value="desktop">Desktop keyboard</option><option value="mobile">Mobile floating controller</option></select>
         <div style="height:18px"></div>
         <button id="playNowBtn" class="btn primary" style="width:100%">Play / Start</button>
         <button id="backMenuBtn" class="btn" style="width:100%;margin-top:12px">Back to Menu</button>
@@ -48,6 +49,35 @@
       <div id="miniHelp" class="miniHelp">Arrow keys / WASD move. Space or Enter action. P pauses. ESC quits.</div>
     </section>
   </main>
+
+
+  <div id="gamePrompt" class="modal hidden" role="dialog" aria-modal="true" aria-labelledby="promptTitle">
+    <div class="modalBox">
+      <button id="promptClose" class="modalClose" aria-label="Close">×</button>
+      <div id="promptIcon" class="promptIcon">🕹️</div>
+      <h2 id="promptTitle" class="pixel">START GAME?</h2>
+      <p id="promptText">Ready to play?</p>
+      <div class="promptActions">
+        <button id="promptNo" class="btn">Not Now</button>
+        <button id="promptDetails" class="btn cyan">Instructions</button>
+        <button id="promptYes" class="btn primary">Start</button>
+      </div>
+    </div>
+  </div>
+
+  <div id="mobileControls" class="mobileControls hidden" aria-label="Mobile floating controller">
+    <div class="dpad">
+      <button class="vbtn up" data-key="arrowup">▲</button>
+      <button class="vbtn left" data-key="arrowleft">◀</button>
+      <button class="vbtn right" data-key="arrowright">▶</button>
+      <button class="vbtn down" data-key="arrowdown">▼</button>
+    </div>
+    <div class="actionPad">
+      <button class="vbtn action" data-key="space">A</button>
+      <button class="vbtn action secondary" data-key="enter">B</button>
+      <button class="vbtn small" data-key="p">P</button>
+    </div>
+  </div>
 
 </body>
 <script src="public/app.js"></script>
