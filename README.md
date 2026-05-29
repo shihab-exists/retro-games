@@ -1,42 +1,48 @@
 # Retro Arcade Web App MVP
 
-A retro arcade-style web app with a frontend and backend.
+A retro arcade-style web app with a Node.js backend and a browser frontend.
 
-## Included games
+## Current working game list
 
-1. Pac-Man
-2. Sonic the Hedgehog 2
-3. Super Mario World
-4. Street Fighter II
-5. Tetris
-6. The Legend of Zelda: A Link to the Past
-7. Donkey Kong Country
-8. F-Zero
-9. GoldenEye 007
-10. Ape Escape
-11. Tekken 2
-12. Oddworld: Abe's Oddysee
-13. DOOM
-14. Super Metroid
-15. Wild Arms
+This version intentionally keeps only the 5 most stable games:
 
-> This MVP uses original retro-inspired mini-games, UI, and pixel-style illustrations. It does not include official ROMs, official box art, or copyrighted game assets.
+1. Pac-Man-inspired maze chase
+2. Sonic the Hedgehog 2-inspired speed runner
+3. Super Mario World-inspired platformer
+4. Street Fighter II-inspired arcade duel
+5. Tetris-inspired falling-block puzzle
+
+> This project uses original retro-inspired mini-games, UI, and pixel-style illustrations. It does not include official ROMs, official box art, or copyrighted game assets.
+
+## Features
+
+- 5 working selectable games
+- Retro arcade game select screen
+- Start confirmation popup when a game is clicked
+- Instruction/settings screen before gameplay
+- Desktop keyboard controls
+- Mobile floating controller
+- Backend device detection: `/api/device`
+- 100-level campaign metadata for each game
+- Level selector before starting
+- Next-level popup after clearing a level
+- Retry/quit flow after losing
 
 ## Project structure
 
 ```txt
-retro-arcade-webapp/
-├── server.js              # Node backend and static file server
-├── package.json           # Start/check scripts
+retro-games/
+├── server.js
+├── package.json
 ├── README.md
 ├── data/
-│   ├── games.json         # Backend game catalogue, all 15 games
-│   ├── scores.json        # Auto-created high score storage
-│   └── settings.json      # Auto-created settings storage
+│   ├── games.json
+│   ├── scores.json
+│   └── settings.json
 └── public/
-    ├── index.html         # Frontend HTML
-    ├── styles.css         # Retro/pixel/CRT styling
-    └── app.js             # Frontend JS and mini-game engines
+    ├── index.html
+    ├── styles.css
+    └── app.js
 ```
 
 ## Run locally
@@ -45,7 +51,7 @@ retro-arcade-webapp/
 npm start
 ```
 
-Then open:
+Open:
 
 ```txt
 http://localhost:3000
@@ -55,17 +61,20 @@ http://localhost:3000
 
 ```txt
 GET  /api/health
+GET  /api/device
 GET  /api/games
 GET  /api/games/:id
+GET  /api/games/:id/levels
+GET  /api/games/:id/levels/:level
 GET  /api/settings
 PUT  /api/settings
 GET  /api/scores
 POST /api/scores
 ```
 
-## Keyboard controls
+## Controls
 
-Common controls:
+Desktop:
 
 - Move: Arrow Keys or WASD
 - Action / Jump / Shoot: Space
@@ -73,30 +82,9 @@ Common controls:
 - Pause: P
 - Quit: ESC
 
-Each game also has its own instruction screen before play.
+Mobile:
 
-## Latest UX updates
-
-- Clicking any game card now opens a pixel-style confirmation popup asking whether to start.
-- Backend endpoint `GET /api/device` detects mobile vs desktop from request headers.
-- The frontend automatically selects:
-  - Desktop keyboard controls on desktop browsers
-  - Floating touch controller on mobile browsers
-- Mobile players get on-screen D-pad and A/B/P buttons during gameplay.
-- Platform games now draw a small humanoid player character; Super Mario World uses a Mario-like pixel character.
-
-## Campaign upgrade
-
-- All 15 games now expose `totalLevels: 100`.
-- Backend generates 100 campaign levels per game through:
-  - `GET /api/games/:id/levels`
-  - `GET /api/games/:id/levels/:level`
-- Each generated level has its own:
-  - world name
-  - zone
-  - difficulty label
-  - difficulty score
-  - speed/enemy multiplier
-  - target score
-  - palette/theme
-- Frontend instruction screen includes a Campaign Level selector before starting the game.
+- Floating D-pad
+- A button
+- B button
+- P pause button

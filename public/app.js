@@ -3,20 +3,10 @@ const fallbackGames=[
  {id:'speed',title:'Sonic the Hedgehog 2',year:'1992',emoji:'🔵',accent:'#4DA8FF',tag:'Pure speed platforming',desc:'Fast, fluid, and packed with momentum-driven action.',thumb:'sonicThumb',brief:'A fast side-scrolling runner inspired by speed platformers. Keep momentum, jump obstacles, and grab rings.',controls:[['Space / ↑ / W','Jump'],['↓ / S','Slide / fast fall'],['P','Pause'],['ESC','Quit']],objectives:['Collect rings.','Jump over spikes and blocks.','Survive as the speed increases.']},
  {id:'platform',title:'Super Mario World',year:'1990',emoji:'🍄',accent:'#FF4D4D',tag:'Creative classic platforming',desc:'Tight controls and unforgettable level design.',thumb:'marioThumb',brief:'A compact platforming stage with coins, enemies, and chunky blocks. Precision jumping is the whole game.',controls:[['← / → or A / D','Move'],['Space / ↑ / W','Jump'],['↓ / S','Crouch / drop faster'],['ESC','Quit']],objectives:['Collect coins.','Land on enemies or avoid them.','Reach the flag at the far right.']},
  {id:'duel',title:'Street Fighter II',year:'1991',emoji:'🥊',accent:'#FF6B6B',tag:'Arcade 1v1 showdown',desc:'Pick a fighter and test your reflexes and strategy.',thumb:'fightThumb',brief:'A one-screen arcade duel inspired by old-school fighting games. Manage spacing, strike, and block the CPU.',controls:[['← / → or A / D','Move'],['Space','Punch'],['Enter / K','Kick'],['↓ / S','Block']],objectives:['Reduce CPU health to zero.','Block incoming hits.','Do not let your health hit zero.']},
- {id:'tetris',title:'Tetris',year:'1985',emoji:'🧱',accent:'#A66CFF',tag:'Simple. Hypnotic. Brutal.',desc:'Easy to learn, intense to master at higher speeds.',thumb:'tetrisThumb',brief:'A falling-block puzzle challenge. Rotate, place, and clear rows before the stack reaches the top.',controls:[['← / → or A / D','Move piece'],['↑ / W / Space','Rotate'],['↓ / S','Soft drop'],['Enter','Hard drop']],objectives:['Fill rows to clear lines.','Avoid stacking to the top.','Score rises with multi-line clears.']},
- {id:'zelda',title:'The Legend of Zelda: A Link to the Past',year:'1991',emoji:'🗡️',accent:'#59D86D',tag:'Overworld dungeon adventure',desc:'Explore light and dark realms with crafted secrets and danger.',thumb:'zeldaThumb',brief:'A top-down adventure-inspired challenge. Navigate a dungeon-like maze, collect relics, and avoid roaming monsters.',controls:[['Arrow Keys / WASD','Move hero'],['Space','Use sword / action'],['P','Pause'],['ESC','Quit']],objectives:['Explore the maze.','Collect relics for points.','Avoid monsters and clear the route.']},
- {id:'donkey',title:'Donkey Kong Country',year:'1994',emoji:'🦍',accent:'#C77732',tag:'Jungle platform rush',desc:'Tight platforming, barrels, bananas, and chunky jungle rhythm.',thumb:'donkeyThumb',brief:'A jungle platformer-inspired stage. Run, jump, collect bananas, and dodge hazards.',controls:[['← / → or A / D','Move'],['Space / ↑ / W','Jump'],['↓ / S','Drop faster'],['ESC','Quit']],objectives:['Collect bananas/coins.','Avoid enemies.','Reach the end of the jungle stage.']},
- {id:'fzero',title:'F-Zero',year:'1990',emoji:'🚀',accent:'#FF8A00',tag:'High-speed hover racing',desc:'A futuristic racing rush built around speed and reaction time.',thumb:'fzeroThumb',brief:'A hover-racer-inspired speed challenge. Dodge track hazards as the velocity keeps climbing.',controls:[['← / → or A / D','Steer'],['Space / ↑ / W','Boost jump/evade'],['P','Pause'],['ESC','Quit']],objectives:['Survive the fastest track.','Dodge barriers.','Push your score higher as speed rises.']},
- {id:'goldeneye',title:'GoldenEye 007',year:'1997',emoji:'🔫',accent:'#D6B85A',tag:'Living-room spy shooter',desc:'Split-screen era FPS energy with quick aim and target reflexes.',thumb:'goldenThumb',brief:'A spy-shooter-inspired target range. Move the reticle, tag enemies, and avoid civilian decoys.',controls:[['Arrow Keys / WASD','Move aim'],['Space / Enter','Shoot'],['P','Pause'],['ESC','Quit']],objectives:['Shoot hostile targets.','Avoid missing too much.','Survive the mission timer.']},
- {id:'ape',title:'Ape Escape',year:'1999',emoji:'🐒',accent:'#FFB347',tag:'Monkey-catching gadget chase',desc:'Creative platforming built around chasing clever monkeys through time.',thumb:'apeThumb',brief:'A gadget-platformer-inspired chase. Leap through a stage and collect escaped monkeys/coins.',controls:[['← / → or A / D','Move'],['Space / ↑ / W','Jump'],['Enter','Swing net / action'],['ESC','Quit']],objectives:['Catch monkeys by collecting targets.','Avoid hazards.','Reach the stage end.']},
- {id:'tekken',title:'Tekken 2',year:'1995',emoji:'👾',accent:'#B56CFF',tag:'3D arcade fighter energy',desc:'Deep combos, iconic fighters, and tense close-range duels.',thumb:'tekkenThumb',brief:'A fighting-game-inspired arcade duel. Step in, strike, block, and defeat the CPU opponent.',controls:[['← / → or A / D','Move'],['Space','Punch'],['Enter / K','Kick'],['↓ / S','Block']],objectives:['Drop CPU health to zero.','Time blocks and counterattacks.','Win the round.']},
- {id:'oddworld',title:"Oddworld: Abe's Oddysee",year:'1997',emoji:'👽',accent:'#76D7C4',tag:'Dark puzzle platform escape',desc:'Atmospheric cinematic platforming with danger around every step.',thumb:'oddThumb',brief:'A puzzle-platformer-inspired escape. Move carefully, collect clues, and survive the factory path.',controls:[['← / → or A / D','Move'],['Space / ↑ / W','Jump'],['↓ / S','Sneak/drop'],['ESC','Quit']],objectives:['Move carefully through hazards.','Collect clues.','Escape the stage.']},
- {id:'doom',title:'DOOM',year:'1993',emoji:'💀',accent:'#D6422B',tag:'Fast demon-blasting FPS',desc:'A milestone shooter: quick, intense, loud, and endlessly replayable.',thumb:'doomThumb',brief:'A fast shooter-inspired target arena. Keep moving, blast demons, and survive the wave.',controls:[['Arrow Keys / WASD','Move aim'],['Space / Enter','Fire'],['P','Pause'],['ESC','Quit']],objectives:['Hit enemy targets.','Protect your health.','Survive as targets speed up.']},
- {id:'metroid',title:'Super Metroid',year:'1994',emoji:'🧬',accent:'#FF7A3D',tag:'Isolated sci-fi exploration',desc:'Non-linear exploration, haunting atmosphere, and secrets everywhere.',thumb:'metroidThumb',brief:'A sci-fi exploration-platformer-inspired stage. Jump, collect energy, and reach the exit.',controls:[['← / → or A / D','Move'],['Space / ↑ / W','Jump'],['Enter','Blaster / action'],['ESC','Quit']],objectives:['Collect energy orbs.','Avoid alien hazards.','Reach the far exit.']},
- {id:'wildarms',title:'Wild Arms',year:'1996',emoji:'🌍',accent:'#E2B15C',tag:'Western JRPG adventure',desc:'A sweeping frontier quest with emotional story and classic RPG charm.',thumb:'wildThumb',brief:'A western-RPG-inspired overworld quest. Explore the frontier maze, collect treasures, and avoid monsters.',controls:[['Arrow Keys / WASD','Move traveler'],['Space / Enter','Interact'],['P','Pause'],['ESC','Quit']],objectives:['Collect treasure.','Avoid roaming enemies.','Finish the frontier route.']}
-];
+ {id:'tetris',title:'Tetris',year:'1985',emoji:'🧱',accent:'#A66CFF',tag:'Simple. Hypnotic. Brutal.',desc:'Easy to learn, intense to master at higher speeds.',thumb:'tetrisThumb',brief:'A falling-block puzzle challenge. Rotate, place, and clear rows before the stack reaches the top.',controls:[['← / → or A / D','Move piece'],['↑ / W / Space','Rotate'],['↓ / S','Soft drop'],['Enter','Hard drop']],objectives:['Fill rows to clear lines.','Avoid stacking to the top.','Score rises with multi-line clears.']}
+]
 let games=[...fallbackGames];
-let selected=null, selectedLevel=null, currentLevels=[], settings={difficulty:'normal',sound:true,crt:true,visual:'glow',controlMode:'desktop'};
+let selected=null, selectedLevel=null, currentLevels=[], levelEnded=false, settings={difficulty:'normal',sound:true,crt:true,visual:'glow',controlMode:'desktop'};
 let deviceInfo={type:'desktop',isMobile:false,source:'fallback'};
 let virtualKeys={};
 const $=id=>document.getElementById(id); const menu=$('menu'), inst=$('instructions'), play=$('play');
@@ -106,13 +96,46 @@ bindMobileControls();
 window.addEventListener('keydown',e=>{keys[e.key.toLowerCase()]=true; if(['ArrowUp','ArrowDown','ArrowLeft','ArrowRight',' '].includes(e.key)) e.preventDefault(); if(e.key.toLowerCase()==='p') togglePause(); if(e.key==='Escape' && !play.classList.contains('hidden')) quitGame(); if(engine&&engine.keydown) engine.keydown(e.key.toLowerCase());});
 window.addEventListener('keyup',e=>{keys[e.key.toLowerCase()]=false; if(engine&&engine.keyup) engine.keyup(e.key.toLowerCase());});
 function diffMult(){const assist=settings.difficulty==='easy'?.78:settings.difficulty==='hard'?1.28:1; const levelBoost=selectedLevel?selectedLevel.speedMultiplier:1; return assist*levelBoost}
-function startGame(){if(!selectedLevel) selectedLevel=fallbackLevels(selected)[0]; showScreen(play); $('playTitle').textContent=`${selected.emoji} ${selected.title} • L${selectedLevel.level}`; $('miniHelp').textContent=`World: ${selectedLevel.world} • Difficulty ${selectedLevel.difficultyScore}/100 • ${settings.controlMode==='mobile'?'Use floating controller.':'Use keyboard controls.'}`; $('pauseOverlay').innerHTML='<div class="box"><h3 class="pixel">PAUSED</h3><p>Press P or the Pause button to continue.</p><button id="resumeBtnInline" class="btn primary">Resume</button></div>'; $('pauseOverlay').classList.add('hidden'); setTimeout(()=>{const b=$('resumeBtnInline'); if(b)b.onclick=()=>togglePause();},0); paused=false; keys={}; virtualKeys={}; updateMobileControls(); if(engine&&engine.destroy)engine.destroy(); engine=makeEngine(selected.id); last=performance.now(); cancelAnimationFrame(raf); loop(last); beep(880,.08)}
+function startGame(){if(!selectedLevel) selectedLevel=fallbackLevels(selected)[0]; showScreen(play); $('playTitle').textContent=`${selected.emoji} ${selected.title} • L${selectedLevel.level}`; $('miniHelp').textContent=`World: ${selectedLevel.world} • Difficulty ${selectedLevel.difficultyScore}/100 • ${settings.controlMode==='mobile'?'Use floating controller.':'Use keyboard controls.'}`; $('pauseOverlay').innerHTML='<div class="box"><h3 class="pixel">PAUSED</h3><p>Press P or the Pause button to continue.</p><button id="resumeBtnInline" class="btn primary">Resume</button></div>'; $('pauseOverlay').classList.add('hidden'); setTimeout(()=>{const b=$('resumeBtnInline'); if(b)b.onclick=()=>togglePause();},0); paused=false; levelEnded=false; keys={}; virtualKeys={}; updateMobileControls(); if(engine&&engine.destroy)engine.destroy(); engine=makeEngine(selected.id); last=performance.now(); cancelAnimationFrame(raf); loop(last); beep(880,.08)}
 function quitGame(){cancelAnimationFrame(raf); engine=null; virtualKeys={}; showScreen(menu); updateMobileControls(); beep(180,.08)}
 function togglePause(){ if(play.classList.contains('hidden'))return; paused=!paused; $('pauseOverlay').classList.toggle('hidden',!paused); $('statusHud').textContent=paused?'PAUSED':'RUNNING'; beep(paused?260:520); if(!paused){last=performance.now();loop(last)} }
 function loop(t){ if(paused||!engine)return; let dt=Math.min(.033,(t-last)/1000); last=t; engine.update(dt); engine.draw(ctx); raf=requestAnimationFrame(loop); }
-function hud(score,lives,status){$('scoreHud').textContent='SCORE '+score; $('lifeHud').textContent='LIVES '+lives; $('statusHud').textContent=`L${selectedLevel?selectedLevel.level:1} ${status||'RUNNING'}`}
+function hud(score,lives,status){
+  $('scoreHud').textContent='SCORE '+score;
+  $('lifeHud').textContent='LIVES '+lives;
+  $('statusHud').textContent=`L${selectedLevel?selectedLevel.level:1} ${status||'RUNNING'}`;
+  if(selectedLevel && !levelEnded && score >= selectedLevel.targetScore){
+    gameOver('LEVEL CLEAR');
+  }
+}
 function press(...arr){return arr.some(k=>keys[k]||keys[k.toLowerCase()]||virtualKeys[k]||virtualKeys[k.toLowerCase()])}
-function gameOver(msg){paused=true; $('pauseOverlay').classList.remove('hidden'); $('pauseOverlay').innerHTML=`<div class="box"><h3 class="pixel">${msg}</h3><p>Press START to retry or QUIT to return to menu.</p><button onclick="startGame()" class="btn primary">Start Again</button><button onclick="quitGame()" class="btn danger" style="margin-left:10px">Quit</button></div>`;}
+function isWinMessage(msg){return /WIN|CLEAR|COMPLETE|STAGE CLEAR|MISSION CLEAR|LEVEL CLEAR|K\.O\. YOU WIN/i.test(msg)}
+function nextLevel(){
+  if(!selectedLevel) selectedLevel=fallbackLevels(selected)[0];
+  if(selectedLevel.level>=100){ quitGame(); return; }
+  const nextNo=selectedLevel.level+1;
+  selectedLevel=currentLevels.find(l=>l.level===nextNo) || fallbackLevels(selected)[nextNo-1];
+  const sel=$('levelSelect'); if(sel) sel.value=String(nextNo);
+  updateLevelInfo();
+  startGame();
+}
+function gameOver(msg){
+  if(levelEnded) return;
+  levelEnded=true;
+  paused=true;
+  const won=isWinMessage(msg);
+  const levelNo=selectedLevel?selectedLevel.level:1;
+  const campaignDone=won && levelNo>=100;
+  $('pauseOverlay').classList.remove('hidden');
+  $('pauseOverlay').innerHTML=`<div class="box"><h3 class="pixel">${campaignDone?'CAMPAIGN COMPLETE':msg}</h3>
+    <p>${won ? (campaignDone?'You cleared all 100 levels. Legendary run complete!':`Level ${levelNo} finished. Continue to Level ${levelNo+1}?`) : `Level ${levelNo} failed. Try again or quit.`}</p>
+    <div class="promptActions">
+      ${won && !campaignDone ? '<button onclick="nextLevel()" class="btn primary">Next Level</button>' : ''}
+      <button onclick="startGame()" class="btn cyan">Retry Level</button>
+      <button onclick="quitGame()" class="btn danger">Quit</button>
+    </div>
+  </div>`;
+}
 function clear(){ctx.fillStyle='#05070d';ctx.fillRect(0,0,960,540)}
 function makeEngine(id){return ({maze:mazeEngine,speed:speedEngine,platform:platformEngine,duel:duelEngine,tetris:tetrisEngine,zelda:mazeEngine,donkey:platformEngine,fzero:speedEngine,goldeneye:shooterEngine,ape:platformEngine,tekken:duelEngine,oddworld:platformEngine,doom:shooterEngine,metroid:platformEngine,wildarms:mazeEngine}[id]||platformEngine)()}
 
