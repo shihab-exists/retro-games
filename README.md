@@ -98,3 +98,15 @@ Level selection now changes gameplay, not just text:
 - A level banner is drawn inside the game canvas showing world, level number, and difficulty score.
 - Difficulty affects game speed/enemy behavior through level multipliers.
 - Higher campaign levels increase speed/enemy pressure and target score.
+
+## Actual gameplay upgrade
+
+The five game engines were upgraded beyond visual theme swaps:
+
+- Pac-Man: generated maze layout changes per level, ghost count increases, ghost AI gets smarter.
+- Sonic: generated obstacle/ring/ramp patterns, stage distance, speed, spawn pressure, and finish line change per level.
+- Mario/platformer: generated platforms, gaps, coins, enemies, stage length, and enemy speed change per level.
+- Fighter: CPU health, movement speed, attack timing, and damage scale by level.
+- Tetris: gravity speed increases and higher levels start with generated garbage rows.
+
+Each selected level now changes both the environment and actual gameplay rules.
